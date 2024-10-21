@@ -1,0 +1,114 @@
+/* Container principal */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f3f3f3 0%, #e8e8e8 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.form-wrapper {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+
+/* Formulário elegante */
+.form-card {
+    background-color: rgba(255, 255, 255, 0.7); /* Transparente e suave */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Animação ao passar o mouse */
+.form-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Título do formulário */
+.form-card h2 {
+    color: #785959e8;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* Input e botão com o mesmo tamanho */
+.form-card input,
+.form-card button {
+    width: calc(100% - 20px); /* Ajustar para caber dentro do card */
+    max-width: 360px; /* Tamanho máximo consistente */
+    margin: 10px auto; /* Centralizar dentro do card */
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 30px; /* Arredondado */
+    border: none;
+    transition: all 0.3s;
+}
+
+/* Estilo do input */
+.form-card input {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.form-card input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Placeholder do input */
+.form-card input::placeholder {
+    color: #b7b7b7;
+    font-style: italic;
+}
+
+/* Estilo do botão */
+.form-card button {
+    background-color: #785959e8;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.form-card button:hover {
+    background-color: #654545;
+    transform: scale(1.05);
+}
+
+/* Mensagem de erro */
+.error {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .form-card {
+        padding: 30px;
+    }
+
+    .form-card h2 {
+        font-size: 20px;
+    }
+
+    .form-card input,
+    .form-card button {
+        font-size: 14px;
+    }
+}
