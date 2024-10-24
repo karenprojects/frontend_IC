@@ -12,7 +12,8 @@ const Login = ({ setUserData }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://172.16.72.223:8000/login', {
+      // Substitua pela URL pública do ngrok
+      await axios.post('https://4eb6-201-95-151-91.ngrok-free.app/login', {
         nome_completo: nomeCompleto,
         telefone: telefone,
       });
@@ -23,6 +24,7 @@ const Login = ({ setUserData }) => {
       // Redireciona para a tela de verificação
       navigate('/verificar');
     } catch (error) {
+      console.error('Erro na requisição:', error);
       setErro('Erro ao salvar os dados de login.');
     }
   };
