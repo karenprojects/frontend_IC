@@ -11,7 +11,7 @@ const PredictForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/predict', { texto });
+      const response = await axios.post('http://172.16.72.223:8000/predict', { texto });
       navigate('/resultado', { state: response.data });
     } catch (error) {
       setErro('Erro ao classificar a notícia.');

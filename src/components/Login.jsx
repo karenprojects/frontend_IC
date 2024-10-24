@@ -12,7 +12,7 @@ const Login = ({ setUserData }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8000/login', {
+      await axios.post('http://172.16.72.223:8000/login', {
         nome_completo: nomeCompleto,
         telefone: telefone,
       });
